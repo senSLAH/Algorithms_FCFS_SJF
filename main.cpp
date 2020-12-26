@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <cstring>
-#include "Process.h"
+
 #include "Algorithms.h"
 #include "Controller.h"
 
@@ -15,9 +15,8 @@ int main()
     std::ifstream input_file;
 
 
-    Process p{};
     Algorithms a;
-    Controller ctrl(p,a);
+    Controller ctrl(a);
     input_file.open(path);
     if (!input_file.is_open())
     {

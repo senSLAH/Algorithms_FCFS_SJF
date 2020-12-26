@@ -2,9 +2,9 @@
 #include "Controller.h"
 
 
-Controller::Controller(Process &p, Algorithms &a):process(p),algorithms(a)
+Controller::Controller(Algorithms &a):algorithms(a)
 {
-    state = Menu;
+    current_state = MENU;
 }
 
 std::vector<Process> Controller::make_100_random_elemts()
@@ -13,8 +13,8 @@ std::vector<Process> Controller::make_100_random_elemts()
     for (int i = 0; i < 100; ++i)
     {
         Process process;
-        process.set_arrival_time(rand() % 50);
-        process.set_service_time(rand() % 50);
+        process.arrival_time = rand() % 50;
+        process.service_time = rand() % 50;
         temp.push_back(process);
     }
     return temp;
@@ -22,32 +22,44 @@ std::vector<Process> Controller::make_100_random_elemts()
 
 State Controller::get_state()
 {
-    return state;
+    return current_state;
 }
 
 void Controller::draw()
 {
-    int temp = 0;
-    if (state == Menu)
+    int temp;
+    if (current_state == MENU)
     {
+        temp = 0;
         std::cout << "\nAlgoritms:\n";
         std::cout << "1) FCFS\n";
         std::cout << "2) SJF\n";
 
-        while (temp != 1 && temp != 2)
+        while (true)
         {
             std::cout << "\nYour choice:\n";
             std::cin >> temp;
-            if (temp > 2 || temp < 1)
-                std::cout << "Plese chose 1 or 2";
+            if (temp < 3 && temp > 0)
+            {
+                current_state = static_cast<State>(temp);
+                break;
+            }
             else
-                state = static_cast<State>(temp);
+                std::cout << "Plese chose 1 or 2";
         }
-
+    }
+    if (current_state == FCFS || current_state == SJF)
+    {
+        temp = 0;
+        std::cout << "\n1) Use data from file\n";
+        std::cout << "2) Use 100 randomly generated values\n";
+        std::cout << "3) Use 1000 randomly generated values\n";
+        std::cout << "Chose option:\n";
+        std::cin >> temp;
     }
 }
 
 void Controller::set_state(State s)
 {
-    state = s;
+    current_state = s;
 }
