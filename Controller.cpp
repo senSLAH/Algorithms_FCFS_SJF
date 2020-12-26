@@ -2,9 +2,10 @@
 #include "Controller.h"
 
 
-Controller::Controller(Algorithms &a):algorithms(a)
+Controller::Controller(Algorithms &a, File_operation &f):algorithms(a), file(f)
 {
-    current_state = MENU;
+    last_state = current_state = MENU;
+    data_option = NOT_CHOSEN;
 }
 
 std::vector<Process> Controller::make_100_random_elemts()
@@ -41,6 +42,7 @@ void Controller::draw()
             std::cin >> temp;
             if (temp < 3 && temp > 0)
             {
+                last_state = current_state;
                 current_state = static_cast<State>(temp);
                 break;
             }
@@ -48,7 +50,8 @@ void Controller::draw()
                 std::cout << "Plese chose 1 or 2";
         }
     }
-    if (current_state == FCFS || current_state == SJF)
+
+    if ((current_state == FCFS || current_state == SJF) && data_option == NOT_CHOSEN)
     {
         temp = 0;
         std::cout << "\n1) Use data from file\n";
@@ -56,6 +59,8 @@ void Controller::draw()
         std::cout << "3) Use 1000 randomly generated values\n";
         std::cout << "Chose option:\n";
         std::cin >> temp;
+        data_option = static_cast<Data_option>(temp);
+        file.data_settings(temp);
     }
 }
 
