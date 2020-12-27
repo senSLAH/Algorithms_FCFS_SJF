@@ -2,6 +2,7 @@
 
 File_operation::File_operation()
 {
+    data_option = 0;
     input_file.open("../Test_data.txt");
     if (!input_file.is_open())
     {
@@ -20,6 +21,7 @@ File_operation::File_operation()
 
 void File_operation::data_settings(int option)
 {
+    data_option = option;
     if (option == 1)
         read_file();
     if (option == 2)
@@ -31,40 +33,54 @@ void File_operation::read_file()
 {
     char ch;
     std::string data_form_file;
+    std::string save_value;
     Process temp;
     while (input_file.get(ch))
         data_form_file += ch;
 
     for (int i = 0; i < data_form_file.size(); ++i)
     {
+        save_value = "";
         if (data_form_file[i] == 'P')
         {
-            i += 1;
-            temp.name = (int)data_form_file[i] - (int)'0';
+            while (true)
+            {
+                i += 1;
+                if(data_form_file[i] == ':')
+                    break;
+                save_value += data_form_file[i];
+            }
+            temp.name = stoi(save_value);
         }
         if (data_form_file[i] == 's')
         {
-            i += 2;
-            temp.service_time = (int)data_form_file[i] - (int)'0';
+            save_value = "";
+            while (true)
+            {
+                i += 1;
+                if (data_form_file[i] == '=')
+                    continue;
+                else if(data_form_file[i] == ' ')
+                    break;
+                save_value += data_form_file[i];
+            }
+            temp.service_time = stoi(save_value);
         }
         if (data_form_file[i] == 'a')
         {
-            i += 2;
-            temp.arrival_time = (int)data_form_file[i] - (int)'0';
+            save_value = "";
+            while (true)
+            {
+                i += 1;
+                if (data_form_file[i] == '=')
+                    continue;
+                else if(data_form_file[i] == '\n' || data_form_file[i] == '\0' )
+                    break;
+                save_value += data_form_file[i];
+            }
+            temp.arrival_time = stoi(save_value);
             data_storage.push_back(temp);
         }
-    }
-    draw_processes();
-}
-
-void File_operation::draw_processes()
-{
-    for (auto & i : data_storage)
-    {
-        std::cout << i.name;
-        std::cout << i.service_time;
-        std::cout << i.arrival_time;
-        std::cout << "\n--------------------------------------\n";
     }
 }
 
@@ -81,19 +97,44 @@ void File_operation::generate_100_sets_of_100_elements()
             data_storage_two_measures[i][j] = temp;
         }
     }
+}
 
-    for (int i = 0; i < data_storage_two_measures.size(); ++i)
+void File_operation::draw_processes() const
+{
+    if (data_option == 1)
     {
-        for (int j = 0; j < data_storage_two_measures[i].size(); ++j)
+        for (auto &i : data_storage)
         {
-             std::cout << "Process: " << data_storage_two_measures[i][j].name << " in the first sample:" << i+1 << "\n";
-             std::cout << "Service time: " << data_storage_two_measures[i][j].service_time << "\n";
-             std::cout << "Arrival time: " << data_storage_two_measures[i][j].arrival_time << "\n";
-             std::cout << "\n--------------------------------------\n";
+            std::cout << "Process: " << i.name << "\n";
+            std::cout << "Service time: " << i.service_time << "\n";
+            std::cout << "Arrival time: " << i.arrival_time << "\n";
+            std::cout << "\n--------------------------------------\n";
         }
-
     }
-    std::cin >> temp.name;
+    else if (data_option == 2)
+    {
+        for (int i = 0; i < data_storage_two_measures.size(); ++i)
+        {
+            for (int j = 0; j < data_storage_two_measures[i].size(); ++j)
+            {
+                std::cout << "Process: " << data_storage_two_measures[i][j].name << " in the first sample:" << i + 1
+                          << "\n";
+                std::cout << "Service time: " << data_storage_two_measures[i][j].service_time << "\n";
+                std::cout << "Arrival time: " << data_storage_two_measures[i][j].arrival_time << "\n";
+                std::cout << "\n--------------------------------------\n";
+            }
+        }
+    }
+}
+
+std::vector<Process>& File_operation::get_data_storage()
+{
+    return data_storage;
+}
+
+std::vector<std::vector<Process>> File_operation::get_data_storage_two_measures() const
+{
+    return data_storage_two_measures;
 }
 
 

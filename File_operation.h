@@ -13,6 +13,8 @@ struct Process
     int service_time;
     int name;
     int waiting_time;
+    int turnaround_time;
+    int completed;
 };
 
 class File_operation
@@ -20,13 +22,16 @@ class File_operation
     std::ifstream input_file;
     std::vector<Process> data_storage;
     std::vector<std::vector<Process>> data_storage_two_measures;
+    int data_option;
 
 public:
     File_operation();
     void data_settings(int option);
     void read_file();
     void generate_100_sets_of_100_elements();
-    void draw_processes();
+    std::vector<Process>& get_data_storage();
+    std::vector<std::vector<Process>> get_data_storage_two_measures() const;
+    void draw_processes() const;
 };
 
 
