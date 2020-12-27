@@ -8,18 +8,6 @@ Controller::Controller(Algorithms &a, File_operation &f):algorithms(a), file(f)
     data_option = NOT_CHOSEN;
 }
 
-std::vector<Process> Controller::make_100_random_elemts()
-{
-    std::vector<Process> temp;
-    for (int i = 0; i < 100; ++i)
-    {
-        Process process;
-        process.arrival_time = rand() % 50;
-        process.service_time = rand() % 50;
-        temp.push_back(process);
-    }
-    return temp;
-}
 
 State Controller::get_state()
 {
@@ -55,8 +43,8 @@ void Controller::draw()
     {
         temp = 0;
         std::cout << "\n1) Use data from file\n";
-        std::cout << "2) Use 100 randomly generated values\n";
-        std::cout << "3) Use 1000 randomly generated values\n";
+        std::cout << "2) Generate 100 sets of 100 elements each\n";
+
         std::cout << "Chose option:\n";
         std::cin >> temp;
         data_option = static_cast<Data_option>(temp);
