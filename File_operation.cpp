@@ -9,7 +9,14 @@ File_operation::File_operation()
         std::cerr << strerror(errno) << std::endl;
         abort();
     }
-    std::cout << "File opened successfully!";
+    output_file.open("../Results.txt");
+    if (!output_file.is_open())
+    {
+        std::cerr << strerror(errno) << std::endl;
+        abort();
+    }
+    std::cout << "File input file opened successfully!";
+    std::cout << "File output file opened successfully!";
 
     data_storage_two_measures.resize(100);
     for (auto & data_storage_two_measure : data_storage_two_measures)
@@ -84,6 +91,7 @@ void File_operation::read_file()
     }
 }
 
+
 void File_operation::generate_100_sets_of_100_elements()
 {
     Process temp;
@@ -135,6 +143,22 @@ std::vector<Process>& File_operation::get_data_storage()
 std::vector<std::vector<Process>> File_operation::get_data_storage_two_measures() const
 {
     return data_storage_two_measures;
+}
+
+//void File_operation::write_to_file(std::vector<Results> results)
+//{
+//    for (int i = 0; i < results.size(); ++i)
+//    {
+//        output_file << "\n\nAverage waiting time: " << results[i].average_waiting;
+//        output_file << "\nAverage turnaround time:: " << results[i].average_turnaround;
+//    }
+//}
+
+File_operation::~File_operation()
+{
+    input_file.close();
+    output_file.close();
+    std::cout << "Files successfully closed!\n";
 }
 
 

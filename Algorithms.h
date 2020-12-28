@@ -3,8 +3,14 @@
 #include "vector"
 #include "File_operation.h"
 
-enum State : int {MENU = 0 , FCFS = 1, SJF, STOP};
+enum State : int {MENU = 0 , FCFS = 1, SJF, WRITE ,STOP};
 enum Data_option : int {NOT_CHOSEN = 0, FROM_FILE = 1, _100_sets_of_100_elements = 2 };
+
+struct Results
+{
+    float average_waiting;
+    float average_turnaround;
+};
 
 class Algorithms
 {
