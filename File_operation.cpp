@@ -145,14 +145,15 @@ std::vector<std::vector<Process>> File_operation::get_data_storage_two_measures(
     return data_storage_two_measures;
 }
 
-//void File_operation::write_to_file(std::vector<Results> results)
-//{
-//    for (int i = 0; i < results.size(); ++i)
-//    {
-//        output_file << "\n\nAverage waiting time: " << results[i].average_waiting;
-//        output_file << "\nAverage turnaround time:: " << results[i].average_turnaround;
-//    }
-//}
+void File_operation::write_to_file(std::vector<std::vector<float>> res)
+{
+    for (int i = 0; i < res.size(); ++i)
+    {
+        output_file << "Process: " << 1+i;
+        output_file << "\nAverage waiting time: " << res[i][0];
+        output_file << "\nAverage turnaround time: " << res[i][1] << "\n";
+    }
+}
 
 File_operation::~File_operation()
 {

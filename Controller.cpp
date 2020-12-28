@@ -68,7 +68,8 @@ void Controller::draw()
         if (current_state == WRITE)
         {
             // функция для записи в файл результатов
-//            file.write_to_file(algorithms.get_results());
+            file.write_to_file(algorithms.get_results());
+            current_state = STOP;
         }
     }
 }

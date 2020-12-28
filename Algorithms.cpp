@@ -134,18 +134,18 @@ void Algorithms::average_TAT_WT(std::vector<Process> &arr_of_proces)
     avg_turnaround = avg_turnaround / arr_of_proces.size();
     avg_waiting = avg_waiting / arr_of_proces.size();
 
-//    Results res;
-//    res.average_waiting = avg_waiting;
-//    res.average_turnaround = avg_turnaround;
-//    results.push_back(res);
+    std::vector<float> res;
+    res.push_back(avg_waiting);
+    res.push_back(avg_turnaround);
+    results.push_back(res);
     std::cout << "Average waiting time: " << avg_waiting << "\n";
     std::cout << "Average turnaround time: " << avg_turnaround << "\n";
 }
 
-//std::vector<Results> Algorithms::get_results()
-//{
-//    return results;
-//}
+std::vector<std::vector<float>> Algorithms::get_results()
+{
+    return results;
+}
 
 
 
