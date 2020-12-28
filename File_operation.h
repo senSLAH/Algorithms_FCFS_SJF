@@ -9,11 +9,12 @@
 
 struct Process
 {
-    int arrival_time;
-    int service_time;
+    float arrival_time;
+    float service_time;
     int name;
     int waiting_time;
     int turnaround_time;
+    int started;
     int completed;
 };
 

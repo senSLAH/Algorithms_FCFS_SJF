@@ -55,12 +55,16 @@ void Controller::draw()
         std::cin >> temp;
         if (temp == 1)
             file.draw_processes();
-        if (temp == 2 && data_option == FROM_FILE)
+        if (temp == 2 && current_state == FCFS &&data_option == FROM_FILE)
         {
             //            algorithms.run_algorithm(current_state, data_option);
             algorithms.FCFS_algorithm(file.get_data_storage());
         }
-
+        if (temp == 2 && current_state == SJF && data_option == FROM_FILE)
+        {
+            //            algorithms.run_algorithm(current_state, data_option);
+            algorithms.SJF_algorith(file.get_data_storage());
+        }
     }
 }
 
