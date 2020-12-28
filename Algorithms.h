@@ -13,6 +13,8 @@ public:
     void run_algorithm(State algorithm_type, Data_option option);
     void FCFS_algorithm(std::vector<Process> &arr_of_proces);
     void SJF_algorith(std::vector<Process> &arr_of_proces);
+    void average_TAT_WT(std::vector<Process> &arr_of_proces);
+    void bubble_sort(std::vector<Process> &arr_of_proces, std::string str = "arrival");
 };
 
 
