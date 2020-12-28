@@ -57,21 +57,26 @@ void Algorithms::SJF_algorith(std::vector<Process> &arr_of_proces)
 
     int current_time = 0;
     int arr_size = arr_of_proces.size();
-
+    bool first_iteration = true;
     for (int i = 0; i < arr_size; ++i)
     {
         for (int j = 0; j < arr_of_proces.size(); ++j)
         {
-            if (current_time >= arr_of_proces[j].arrival_time)
+            if (current_time >= arr_of_proces[j].arrival_time || first_iteration)
             {
                 temp.push_back(arr_of_proces[j]);
                 arr_of_proces.erase(arr_of_proces.begin() + j);
                 j = -1;
+                first_iteration = false;
             }
         }
+
+
         bubble_sort(temp, "service");
         correct_sequence.push_back(temp[0]);
         temp.erase(temp.begin());
+
+
 
         if (current_time < correct_sequence[i].arrival_time)
         {
