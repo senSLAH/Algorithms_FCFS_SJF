@@ -60,12 +60,23 @@ void Controller::draw()
             algorithms.FCFS_algorithm(file.get_data_storage());
             current_state = WRITE;
         }
+        if (temp == 2 && current_state == FCFS && data_option == _100_sets_of_100_elements)
+        {
+            algorithms.FCFS_algorithm_two_measures(file.get_data_storage_two_measures());
+            current_state = WRITE;
+        }
         if (temp == 2 && current_state == SJF && data_option == FROM_FILE)
         {
             algorithms.SJF_algorith(file.get_data_storage());
             current_state = WRITE;
         }
-        if (current_state == WRITE)
+        if (current_state == WRITE && data_option == FROM_FILE)
+        {
+            // функция для записи в файл результатов
+            file.write_to_file(algorithms.get_results());
+            current_state = STOP;
+        }
+        if (current_state == WRITE && data_option == _100_sets_of_100_elements)
         {
             // функция для записи в файл результатов
             file.write_to_file(algorithms.get_results());

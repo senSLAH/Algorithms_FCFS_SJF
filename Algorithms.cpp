@@ -4,22 +4,8 @@ Algorithms::Algorithms()
 {
 }
 
-//void Algorithms::run_algorithm(State algorithm_type, Data_option option)
-//{
-//    if (algorithm_type == FCFS)
-//    {
-//        if (option == FROM_FILE)
-//        {
-//            FCFS_algorithm()
-//        }
-//        if (option == _100_sets_of_100_elements){}
-//    }
-//    if (algorithm_type == SJF)
-//    {
-//        if (option == FROM_FILE){}
-//        if (option == _100_sets_of_100_elements){}
-//    }
-//}
+
+
 
 void Algorithms::FCFS_algorithm(std::vector<Process> &arr_of_proces)
 {
@@ -145,6 +131,15 @@ void Algorithms::average_TAT_WT(std::vector<Process> &arr_of_proces)
 std::vector<std::vector<float>> Algorithms::get_results()
 {
     return results;
+}
+
+void Algorithms::FCFS_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces)
+{
+    for (int i = 0; i < arr_of_proces.size(); ++i)
+    {
+        FCFS_algorithm(arr_of_proces[i]);
+    }
+
 }
 
 

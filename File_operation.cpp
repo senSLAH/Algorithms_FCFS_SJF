@@ -140,7 +140,7 @@ std::vector<Process>& File_operation::get_data_storage()
     return data_storage;
 }
 
-std::vector<std::vector<Process>> File_operation::get_data_storage_two_measures() const
+std::vector<std::vector<Process>>& File_operation::get_data_storage_two_measures()
 {
     return data_storage_two_measures;
 }
@@ -151,7 +151,7 @@ void File_operation::write_to_file(std::vector<std::vector<float>> res)
     {
         output_file << "Process: " << 1+i;
         output_file << "\nAverage waiting time: " << res[i][0];
-        output_file << "\nAverage turnaround time: " << res[i][1] << "\n";
+        output_file << "\nAverage turnaround time: " << res[i][1] << "\n\n";
     }
 }
 

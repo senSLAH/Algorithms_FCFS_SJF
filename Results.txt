@@ -1,3 +1,0 @@
-Process: 1
-Average waiting time: 7
-Average turnaround time: 11.8571

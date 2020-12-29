@@ -14,6 +14,7 @@ public:
     Algorithms();
     void run_algorithm(State algorithm_type, Data_option option);
     void FCFS_algorithm(std::vector<Process> &arr_of_proces);
+    void FCFS_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces);
     void SJF_algorith(std::vector<Process> &arr_of_proces);
     void average_TAT_WT(std::vector<Process> &arr_of_proces);
     std::vector<std::vector<float>> get_results();
