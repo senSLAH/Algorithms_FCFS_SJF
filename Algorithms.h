@@ -18,7 +18,13 @@ public:
     void SJF_algorith(std::vector<Process> &arr_of_proces);
     void average_TAT_WT(std::vector<Process> &arr_of_proces);
     std::vector<std::vector<float>> get_results();
-    void bubble_sort(std::vector<Process> &arr_of_proces, std::string str = "arrival");
+
+    void bubble_sort(std::vector<Process> &arr_of_proces, std::string option = "arrival");
+    // funkcja bubble_sort kożysta z algorymu bubble sort przyjmuje dwa parametry:
+    // *-> 'arr_of_proces' który zawiera wszystki procesy
+    // *-> 'option' może przyjmować dwa parametry "arrival" lub "service"
+    // sortuje elementy w 'arr_of_proces' według paramentru "arrival" lub "service"
+    // w zależności od wartosci option
 };
 
 

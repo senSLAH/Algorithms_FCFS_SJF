@@ -91,7 +91,6 @@ void File_operation::read_file()
     }
 }
 
-
 void File_operation::generate_100_sets_of_100_elements()
 {
     Process temp;
@@ -101,7 +100,7 @@ void File_operation::generate_100_sets_of_100_elements()
         {
             temp.name = j+1;
             temp.arrival_time = rand() % 19 + 2;
-            temp.service_time = rand() % 50;
+            temp.service_time = rand() % 19 + 2;
             data_storage_two_measures[i][j] = temp;
         }
     }
