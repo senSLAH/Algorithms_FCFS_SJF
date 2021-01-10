@@ -12,10 +12,10 @@ struct Process
     float arrival_time;
     float service_time;
     int name;
-    int waiting_time;
-    int turnaround_time;
-    int started;
-    int completed;
+    float waiting_time;
+    float turnaround_time;
+    float started;
+    float completed;
 };
 
 class File_operation

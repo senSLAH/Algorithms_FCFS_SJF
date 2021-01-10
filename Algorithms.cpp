@@ -9,8 +9,8 @@ void Algorithms::FCFS_algorithm(std::vector<Process> &arr_of_proces)
     //Korzystamy z babble sort żeby  wysortować procesy
     // w kolejności od najmnejszego czasu przybycia
     bubble_sort(arr_of_proces);
+    float current_time = 0;
 
-    int current_time = 0;
     for (int i = 0; i < arr_of_proces.size(); ++i)//Iterujemy się po wszystkim processam
     {
         if (current_time < arr_of_proces[i].arrival_time)//jeżeli żaden process jeszcze nie czeka na wywołanie
@@ -35,11 +35,10 @@ void Algorithms::SJF_algorith(std::vector<Process> &arr_of_proces)
 {
     std::vector<Process> correct_sequence;
     std::vector<Process> temp_queue;//kolejka
-
     bubble_sort(arr_of_proces);//Korzystamy z babble sort żeby  posortować procesy
                                   // w kolejności od najmnejszego czasu przybycia
 
-    int current_time = 0;
+    float current_time = 0;
     int arr_size = arr_of_proces.size();
     bool first_iteration = true;
     for (int i = 0; i < arr_size; ++i)
@@ -56,7 +55,7 @@ void Algorithms::SJF_algorith(std::vector<Process> &arr_of_proces)
             }
         }
 
-        if (temp_queue.size() != 0)
+        if (!temp_queue.empty())
         {
             bubble_sort(temp_queue, "service");//sortujemy procesy według service_time
             correct_sequence.push_back(temp_queue[0]);
@@ -68,7 +67,6 @@ void Algorithms::SJF_algorith(std::vector<Process> &arr_of_proces)
             current_time = arr_of_proces[0].arrival_time;//zwiększamy current_time
             continue;
         }
-
 
         if (current_time < correct_sequence[i].arrival_time)
         {
@@ -131,7 +129,26 @@ void Algorithms::average_TAT_WT(std::vector<Process> &arr_of_proces)
     res.push_back(avg_turnaround);
     results.push_back(res);
     std::cout << "Average waiting time: " << avg_waiting << "\n";
-    std::cout << "Average turnaround time: " << avg_turnaround << "\n";
+    std::cout << "Average turnaround time: " << avg_turnaround << "\n\n";
+}
+
+void Algorithms::average_TAT_WT(std::vector<std::vector<float>> results)
+{
+    float avg_turnaround = 0;
+    float avg_waiting = 0;
+
+    for (int i = 0; i < results.size(); ++i)
+    {
+        avg_waiting += results[i][0];
+        avg_turnaround += results[i][1];
+    }
+
+    avg_turnaround = avg_turnaround / results.size();
+    avg_waiting = avg_waiting / results.size();
+
+    std::cout << "-----------------------------------" << "\n";
+    std::cout << "Global average waiting time: " << avg_waiting << "\n";
+    std::cout << "Global average turnaround time: " << avg_turnaround << "\n\n";
 }
 
 std::vector<std::vector<float>> Algorithms::get_results()
@@ -142,10 +159,18 @@ std::vector<std::vector<float>> Algorithms::get_results()
 void Algorithms::FCFS_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces)
 {
     for (int i = 0; i < arr_of_proces.size(); ++i)
-    {
         FCFS_algorithm(arr_of_proces[i]);
-    }
+    average_TAT_WT(results);
 }
+
+void Algorithms::SJF_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces)
+{
+    for (int i = 0; i < arr_of_proces.size(); ++i)
+        SJF_algorith(arr_of_proces[i]);
+    average_TAT_WT(results);
+}
+
+
 
 
 

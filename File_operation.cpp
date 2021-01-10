@@ -33,7 +33,6 @@ void File_operation::data_settings(int option)
         read_file();
     if (option == 2)
         generate_100_sets_of_100_elements();
-
 }
 
 void File_operation::read_file()
@@ -41,7 +40,7 @@ void File_operation::read_file()
     char ch;
     std::string data_form_file;
     std::string save_value;
-    Process temp;
+    Process temp{};
     while (input_file.get(ch))
         data_form_file += ch;
 
@@ -93,7 +92,7 @@ void File_operation::read_file()
 
 void File_operation::generate_100_sets_of_100_elements()
 {
-    Process temp;
+    Process temp{};
     for (int i = 0; i < 100; ++i)
     {
         for (int j = 0; j < 100; ++j)
