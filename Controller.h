@@ -13,12 +13,10 @@ class Controller
     Algorithms &algorithms;
     File_operation &file;
     State current_state;
-    State last_state;
     Data_option data_option;
 
 public:
     Controller(Algorithms &a, File_operation &f);
-    void set_state(State s);
     State get_state() const;
     void draw();
 };

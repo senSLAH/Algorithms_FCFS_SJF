@@ -14,9 +14,7 @@ int main()
 
 
     while (ctrl.get_state() != STOP)
-    {
         ctrl.draw();
-    }
 
     return 0;
 }

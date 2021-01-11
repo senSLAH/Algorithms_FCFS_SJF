@@ -18,7 +18,7 @@ void Algorithms::FCFS_algorithm(std::vector<Process> &arr_of_proces)
             arr_of_proces[i].started = arr_of_proces[i].arrival_time;
             current_time = arr_of_proces[i].service_time + arr_of_proces[i].started;
         }
-        else//Jeżeli process już czeka w kolejce. Zaczyna się w momencie, gdy kończy się ostatni.
+        else//Jeżeli process już czeka w kolejce. Process zaczynie się w momencie, gdy kończy się ostatni.
         {
             arr_of_proces[i].started = current_time;
             current_time = arr_of_proces[i].service_time + current_time;//liczymy w jakiem czasie process sie skończy
@@ -28,7 +28,7 @@ void Algorithms::FCFS_algorithm(std::vector<Process> &arr_of_proces)
         arr_of_proces[i].waiting_time = arr_of_proces.at(i).turnaround_time - arr_of_proces.at(i).service_time;
     }
 
-    average_TAT_WT(arr_of_proces);//
+    average_TAT_WT(arr_of_proces);
 }
 
 void Algorithms::SJF_algorith(std::vector<Process> &arr_of_proces)

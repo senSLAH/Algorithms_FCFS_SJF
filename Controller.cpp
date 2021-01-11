@@ -4,7 +4,7 @@
 
 Controller::Controller(Algorithms &a, File_operation &f):algorithms(a), file(f)
 {
-    last_state = current_state = MENU;
+    current_state = MENU;
     data_option = NOT_CHOSEN;
 }
 
@@ -28,7 +28,6 @@ void Controller::draw()
         std::cin >> temp;
         if (temp < 3 && temp > 0)
         {
-            last_state = current_state;
             current_state = static_cast<State>(temp);
         }
         else
@@ -77,20 +76,14 @@ void Controller::draw()
         }
         if (current_state == WRITE && data_option == FROM_FILE)
         {
-            // функция для записи в файл результатов
             file.write_to_file(algorithms.get_results());
             current_state = STOP;
         }
         if (current_state == WRITE && data_option == _100_sets_of_100_elements)
         {
-            // функция для записи в файл результатов
             file.write_to_file(algorithms.get_results());
             current_state = STOP;
         }
     }
 }
 
-void Controller::set_state(State s)
-{
-    current_state = s;
-}
