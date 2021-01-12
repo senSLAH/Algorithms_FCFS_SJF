@@ -9,8 +9,14 @@ File_operation::File_operation()
         std::cerr << strerror(errno) << std::endl;
         abort();
     }
-    output_file.open("../Results.txt");
-    if (!output_file.is_open())
+    output_tested_data_file.open("../Tested_data.txt");
+    if (!output_tested_data_file.is_open())
+    {
+        std::cerr << strerror(errno) << std::endl;
+        abort();
+    }
+    output_results_data_file.open("../Results.txt");
+    if (!output_results_data_file.is_open())
     {
         std::cerr << strerror(errno) << std::endl;
         abort();
@@ -18,12 +24,12 @@ File_operation::File_operation()
     std::cout << "File input file opened successfully!";
     std::cout << "File output file opened successfully!";
 
+//    Rezerwujemy mejsce na stu różnych ciągów ze 100 procesami
     data_storage_two_measures.resize(100);
     for (auto & data_storage_two_measure : data_storage_two_measures)
     {
         data_storage_two_measure.resize(100);
     }
-
 }
 
 void File_operation::data_settings(int option)
@@ -123,7 +129,7 @@ void File_operation::draw_processes() const
         {
             for (int j = 0; j < data_storage_two_measures[i].size(); ++j)
             {
-                std::cout << "Process: " << data_storage_two_measures[i][j].name << " in the first sample:" << i + 1
+                std::cout << "Process: " << data_storage_two_measures[i][j].name << " in the set: " << i + 1
                           << "\n";
                 std::cout << "Service time: " << data_storage_two_measures[i][j].service_time << "\n";
                 std::cout << "Arrival time: " << data_storage_two_measures[i][j].arrival_time << "\n";
@@ -143,22 +149,54 @@ std::vector<std::vector<Process>>& File_operation::get_data_storage_two_measures
     return data_storage_two_measures;
 }
 
-void File_operation::write_to_file(std::vector<std::vector<float>> res)
+void File_operation::write_results_to_file(std::vector<std::vector<float>> res)
 {
     for (int i = 0; i < res.size(); ++i)
     {
-        output_file << "Process: " << 1+i;
-        output_file << "\nAverage waiting time: " << res[i][0];
-        output_file << "\nAverage turnaround time: " << res[i][1] << "\n\n";
+        output_results_data_file << "Set: " << 1 + i;
+        output_results_data_file << "\nAverage waiting time: " << res[i][0];
+        output_results_data_file << "\nAverage turnaround time: " << res[i][1] << "\n\n";
+    }
+
+}
+
+void File_operation::write_tested_data_to_file()
+{
+    if (data_option == 1)
+    {
+        for (auto &i : data_storage)
+        {
+            output_tested_data_file << "Process: " << i.name << "\n";
+            output_tested_data_file << "Service time: " << i.service_time << "\n";
+            output_tested_data_file << "Arrival time: " << i.arrival_time << "\n";
+            output_tested_data_file << "\n--------------------------------------\n";
+        }
+    }
+    else if (data_option == 2)
+    {
+        for (int i = 0; i < data_storage_two_measures.size(); ++i)
+        {
+            for (int j = 0; j < data_storage_two_measures[i].size(); ++j)
+            {
+                output_tested_data_file << "Process: " << data_storage_two_measures[i][j].name << " in the set: " << i + 1
+                                        << "\n";
+                output_tested_data_file << "Service time: " << data_storage_two_measures[i][j].service_time << "\n";
+                output_tested_data_file << "Arrival time: " << data_storage_two_measures[i][j].arrival_time << "\n";
+                output_tested_data_file << "\n--------------------------------------\n";
+            }
+        }
     }
 }
 
 File_operation::~File_operation()
 {
     input_file.close();
-    output_file.close();
+    output_results_data_file.close();
+    output_tested_data_file.close();
     std::cout << "Files successfully closed!\n";
 }
+
+
 
 
 

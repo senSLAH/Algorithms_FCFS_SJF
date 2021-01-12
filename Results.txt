@@ -1,400 +1,400 @@
-Process: 1
-Average waiting time: 399.46
-Average turnaround time: 410.82
+Set: 1
+Average waiting time: 374.06
+Average turnaround time: 385.14
 
-Process: 2
-Average waiting time: 370.47
-Average turnaround time: 381.18
+Set: 2
+Average waiting time: 366.28
+Average turnaround time: 377.09
 
-Process: 3
-Average waiting time: 416.81
-Average turnaround time: 428.49
+Set: 3
+Average waiting time: 347.9
+Average turnaround time: 357.88
 
-Process: 4
-Average waiting time: 398.64
-Average turnaround time: 410
+Set: 4
+Average waiting time: 410.12
+Average turnaround time: 421.53
 
-Process: 5
-Average waiting time: 399.88
-Average turnaround time: 411.14
+Set: 5
+Average waiting time: 390.82
+Average turnaround time: 402.01
 
-Process: 6
-Average waiting time: 366.82
-Average turnaround time: 377.5
+Set: 6
+Average waiting time: 363.43
+Average turnaround time: 373.99
 
-Process: 7
-Average waiting time: 382.72
-Average turnaround time: 393.39
+Set: 7
+Average waiting time: 347.1
+Average turnaround time: 357.52
 
-Process: 8
-Average waiting time: 348.44
-Average turnaround time: 358.88
+Set: 8
+Average waiting time: 362.97
+Average turnaround time: 373.75
 
-Process: 9
-Average waiting time: 397.37
-Average turnaround time: 408.72
+Set: 9
+Average waiting time: 412.27
+Average turnaround time: 423.97
 
-Process: 10
-Average waiting time: 393.35
-Average turnaround time: 404.82
+Set: 10
+Average waiting time: 427.76
+Average turnaround time: 439.64
 
-Process: 11
-Average waiting time: 328.75
-Average turnaround time: 338.66
+Set: 11
+Average waiting time: 354.69
+Average turnaround time: 364.88
 
-Process: 12
-Average waiting time: 455.72
-Average turnaround time: 468.12
+Set: 12
+Average waiting time: 364.51
+Average turnaround time: 375.3
 
-Process: 13
-Average waiting time: 348.2
-Average turnaround time: 358.54
+Set: 13
+Average waiting time: 383.75
+Average turnaround time: 394.73
 
-Process: 14
-Average waiting time: 359.62
-Average turnaround time: 370.28
+Set: 14
+Average waiting time: 339.95
+Average turnaround time: 350.21
 
-Process: 15
-Average waiting time: 405.98
-Average turnaround time: 417.26
+Set: 15
+Average waiting time: 398.66
+Average turnaround time: 409.73
 
-Process: 16
-Average waiting time: 434.78
-Average turnaround time: 446.92
+Set: 16
+Average waiting time: 370.32
+Average turnaround time: 381.22
 
-Process: 17
-Average waiting time: 352.25
-Average turnaround time: 362.75
+Set: 17
+Average waiting time: 377.94
+Average turnaround time: 388.72
 
-Process: 18
-Average waiting time: 358.22
-Average turnaround time: 368.38
+Set: 18
+Average waiting time: 364.14
+Average turnaround time: 374.88
 
-Process: 19
-Average waiting time: 355.83
-Average turnaround time: 366.28
+Set: 19
+Average waiting time: 373.18
+Average turnaround time: 383.82
 
-Process: 20
-Average waiting time: 392.35
-Average turnaround time: 403.43
+Set: 20
+Average waiting time: 417.44
+Average turnaround time: 429.03
 
-Process: 21
-Average waiting time: 381.18
-Average turnaround time: 392.05
+Set: 21
+Average waiting time: 357.06
+Average turnaround time: 367.61
 
-Process: 22
-Average waiting time: 374.29
-Average turnaround time: 385.16
+Set: 22
+Average waiting time: 396.36
+Average turnaround time: 407.59
 
-Process: 23
-Average waiting time: 365.45
-Average turnaround time: 376.29
+Set: 23
+Average waiting time: 382.71
+Average turnaround time: 393.74
 
-Process: 24
-Average waiting time: 423.21
-Average turnaround time: 435.06
+Set: 24
+Average waiting time: 376.21
+Average turnaround time: 386.88
 
-Process: 25
-Average waiting time: 372.09
-Average turnaround time: 382.71
+Set: 25
+Average waiting time: 369.95
+Average turnaround time: 380.69
 
-Process: 26
-Average waiting time: 401.15
-Average turnaround time: 412.54
+Set: 26
+Average waiting time: 396.66
+Average turnaround time: 407.94
 
-Process: 27
-Average waiting time: 397.48
-Average turnaround time: 408.93
+Set: 27
+Average waiting time: 396.31
+Average turnaround time: 407.64
 
-Process: 28
-Average waiting time: 399.72
-Average turnaround time: 411.02
+Set: 28
+Average waiting time: 382.67
+Average turnaround time: 393.64
 
-Process: 29
-Average waiting time: 422.1
-Average turnaround time: 434.07
+Set: 29
+Average waiting time: 416.15
+Average turnaround time: 427.93
 
-Process: 30
-Average waiting time: 341.74
-Average turnaround time: 351.88
+Set: 30
+Average waiting time: 326.92
+Average turnaround time: 337.09
 
-Process: 31
-Average waiting time: 376.11
-Average turnaround time: 386.91
+Set: 31
+Average waiting time: 402.85
+Average turnaround time: 414.13
 
-Process: 32
-Average waiting time: 400.49
-Average turnaround time: 411.51
+Set: 32
+Average waiting time: 332.1
+Average turnaround time: 342.11
 
-Process: 33
-Average waiting time: 355.07
+Set: 33
+Average waiting time: 366.84
+Average turnaround time: 377.72
+
+Set: 34
+Average waiting time: 395.17
+Average turnaround time: 406.26
+
+Set: 35
+Average waiting time: 347.16
+Average turnaround time: 357.26
+
+Set: 36
+Average waiting time: 350.68
+Average turnaround time: 360.97
+
+Set: 37
+Average waiting time: 448.47
+Average turnaround time: 460.63
+
+Set: 38
+Average waiting time: 356.08
+Average turnaround time: 366.58
+
+Set: 39
+Average waiting time: 405.58
+Average turnaround time: 417.1
+
+Set: 40
+Average waiting time: 392.85
+Average turnaround time: 404.12
+
+Set: 41
+Average waiting time: 302.85
+Average turnaround time: 312.37
+
+Set: 42
+Average waiting time: 391.32
+Average turnaround time: 402.48
+
+Set: 43
+Average waiting time: 349.18
+Average turnaround time: 359.73
+
+Set: 44
+Average waiting time: 369.23
+Average turnaround time: 379.91
+
+Set: 45
+Average waiting time: 376.22
+Average turnaround time: 387.02
+
+Set: 46
+Average waiting time: 375.63
+Average turnaround time: 386.23
+
+Set: 47
+Average waiting time: 360.86
+Average turnaround time: 371.44
+
+Set: 48
+Average waiting time: 369.36
+Average turnaround time: 380.01
+
+Set: 49
+Average waiting time: 397.04
+Average turnaround time: 408.5
+
+Set: 50
+Average waiting time: 399.07
+Average turnaround time: 410.37
+
+Set: 51
+Average waiting time: 414.17
+Average turnaround time: 425.8
+
+Set: 52
+Average waiting time: 356.57
+Average turnaround time: 366.79
+
+Set: 53
+Average waiting time: 373.67
+Average turnaround time: 384.56
+
+Set: 54
+Average waiting time: 407.67
+Average turnaround time: 419.38
+
+Set: 55
+Average waiting time: 353.34
+Average turnaround time: 363.52
+
+Set: 56
+Average waiting time: 379.94
+Average turnaround time: 390.89
+
+Set: 57
+Average waiting time: 411.62
+Average turnaround time: 423.02
+
+Set: 58
+Average waiting time: 371.7
+Average turnaround time: 382.65
+
+Set: 59
+Average waiting time: 434.07
+Average turnaround time: 446.01
+
+Set: 60
+Average waiting time: 375.48
+Average turnaround time: 386.25
+
+Set: 61
+Average waiting time: 367.04
+Average turnaround time: 377.62
+
+Set: 62
+Average waiting time: 374.17
+Average turnaround time: 385.29
+
+Set: 63
+Average waiting time: 348.65
+Average turnaround time: 358.72
+
+Set: 64
+Average waiting time: 417.02
+Average turnaround time: 428.73
+
+Set: 65
+Average waiting time: 367.07
+Average turnaround time: 377.54
+
+Set: 66
+Average waiting time: 345.43
+Average turnaround time: 355.65
+
+Set: 67
+Average waiting time: 357.32
+Average turnaround time: 367.72
+
+Set: 68
+Average waiting time: 350.74
+Average turnaround time: 361.04
+
+Set: 69
+Average waiting time: 334.05
+Average turnaround time: 344.08
+
+Set: 70
+Average waiting time: 350.17
+Average turnaround time: 360.63
+
+Set: 71
+Average waiting time: 345.65
+Average turnaround time: 355.96
+
+Set: 72
+Average waiting time: 333.19
+Average turnaround time: 343.11
+
+Set: 73
+Average waiting time: 383.89
+Average turnaround time: 394.85
+
+Set: 74
+Average waiting time: 367.61
+Average turnaround time: 378.55
+
+Set: 75
+Average waiting time: 363.53
+Average turnaround time: 374.18
+
+Set: 76
+Average waiting time: 399.36
+Average turnaround time: 410.55
+
+Set: 77
+Average waiting time: 363.17
+Average turnaround time: 373.62
+
+Set: 78
+Average waiting time: 395.56
+Average turnaround time: 406.74
+
+Set: 79
+Average waiting time: 439.89
+Average turnaround time: 451.85
+
+Set: 80
+Average waiting time: 367.11
+Average turnaround time: 377.66
+
+Set: 81
+Average waiting time: 390.79
+Average turnaround time: 402.03
+
+Set: 82
+Average waiting time: 373.58
+Average turnaround time: 384.24
+
+Set: 83
+Average waiting time: 423.13
+Average turnaround time: 434.94
+
+Set: 84
+Average waiting time: 388.83
+Average turnaround time: 400.26
+
+Set: 85
+Average waiting time: 449.47
+Average turnaround time: 461.82
+
+Set: 86
+Average waiting time: 379.56
+Average turnaround time: 390.24
+
+Set: 87
+Average waiting time: 367
+Average turnaround time: 377.88
+
+Set: 88
+Average waiting time: 353.39
+Average turnaround time: 363.81
+
+Set: 89
+Average waiting time: 354.81
 Average turnaround time: 365.61
 
-Process: 34
-Average waiting time: 383.25
-Average turnaround time: 394.48
-
-Process: 35
-Average waiting time: 392.09
-Average turnaround time: 403.25
-
-Process: 36
-Average waiting time: 423.06
-Average turnaround time: 434.73
-
-Process: 37
-Average waiting time: 358.63
-Average turnaround time: 368.93
-
-Process: 38
-Average waiting time: 398.24
-Average turnaround time: 409.66
-
-Process: 39
-Average waiting time: 352.59
-Average turnaround time: 363.13
-
-Process: 40
-Average waiting time: 368.73
-Average turnaround time: 379.51
-
-Process: 41
-Average waiting time: 369.15
-Average turnaround time: 379.97
-
-Process: 42
-Average waiting time: 375.05
-Average turnaround time: 385.86
-
-Process: 43
-Average waiting time: 398.61
-Average turnaround time: 409.91
-
-Process: 44
-Average waiting time: 390.13
-Average turnaround time: 401.12
-
-Process: 45
-Average waiting time: 381.73
-Average turnaround time: 392.72
-
-Process: 46
-Average waiting time: 350.17
-Average turnaround time: 360.48
-
-Process: 47
-Average waiting time: 373.86
-Average turnaround time: 384.71
-
-Process: 48
-Average waiting time: 427.34
-Average turnaround time: 439.32
-
-Process: 49
-Average waiting time: 361.78
-Average turnaround time: 372.61
-
-Process: 50
-Average waiting time: 381.04
-Average turnaround time: 391.93
-
-Process: 51
-Average waiting time: 426.63
-Average turnaround time: 438.24
-
-Process: 52
-Average waiting time: 345.31
-Average turnaround time: 355.74
-
-Process: 53
-Average waiting time: 396.9
-Average turnaround time: 408.24
-
-Process: 54
-Average waiting time: 374.76
-Average turnaround time: 385.55
-
-Process: 55
-Average waiting time: 400.18
-Average turnaround time: 411.6
-
-Process: 56
-Average waiting time: 396.77
-Average turnaround time: 408.06
-
-Process: 57
-Average waiting time: 398.39
-Average turnaround time: 409.8
-
-Process: 58
-Average waiting time: 371.34
-Average turnaround time: 382.25
-
-Process: 59
-Average waiting time: 383.02
-Average turnaround time: 394.34
-
-Process: 60
-Average waiting time: 368.83
-Average turnaround time: 379.56
-
-Process: 61
-Average waiting time: 400.33
-Average turnaround time: 411.49
-
-Process: 62
-Average waiting time: 438.2
-Average turnaround time: 450.14
-
-Process: 63
-Average waiting time: 362.68
-Average turnaround time: 373.38
-
-Process: 64
-Average waiting time: 358.1
-Average turnaround time: 368.57
-
-Process: 65
-Average waiting time: 438.27
-Average turnaround time: 450.45
-
-Process: 66
-Average waiting time: 335.72
-Average turnaround time: 346.03
-
-Process: 67
-Average waiting time: 340.01
-Average turnaround time: 350.12
-
-Process: 68
-Average waiting time: 388.28
-Average turnaround time: 399.46
-
-Process: 69
-Average waiting time: 388.47
-Average turnaround time: 399.75
-
-Process: 70
-Average waiting time: 380.11
-Average turnaround time: 391.19
-
-Process: 71
-Average waiting time: 381.3
-Average turnaround time: 392.23
-
-Process: 72
-Average waiting time: 374.2
-Average turnaround time: 384.98
-
-Process: 73
-Average waiting time: 395.34
-Average turnaround time: 406.69
-
-Process: 74
-Average waiting time: 425.35
-Average turnaround time: 437.06
-
-Process: 75
-Average waiting time: 375.34
-Average turnaround time: 386.11
-
-Process: 76
-Average waiting time: 363.57
-Average turnaround time: 374.23
-
-Process: 77
-Average waiting time: 379.54
-Average turnaround time: 390.48
-
-Process: 78
-Average waiting time: 392.73
-Average turnaround time: 403.84
-
-Process: 79
-Average waiting time: 322.71
-Average turnaround time: 332.53
-
-Process: 80
-Average waiting time: 401.72
-Average turnaround time: 413.36
-
-Process: 81
-Average waiting time: 366.53
-Average turnaround time: 377.2
-
-Process: 82
-Average waiting time: 423.11
-Average turnaround time: 434.8
-
-Process: 83
-Average waiting time: 367.09
-Average turnaround time: 377.8
-
-Process: 84
-Average waiting time: 337.5
-Average turnaround time: 347.68
-
-Process: 85
-Average waiting time: 420.93
-Average turnaround time: 432.71
-
-Process: 86
-Average waiting time: 405.13
-Average turnaround time: 416.81
-
-Process: 87
-Average waiting time: 358.25
-Average turnaround time: 368.61
-
-Process: 88
-Average waiting time: 388.14
-Average turnaround time: 399.34
-
-Process: 89
-Average waiting time: 367.44
-Average turnaround time: 378.26
-
-Process: 90
-Average waiting time: 368.5
-Average turnaround time: 379.24
-
-Process: 91
-Average waiting time: 387.35
-Average turnaround time: 398.54
-
-Process: 92
-Average waiting time: 345.67
-Average turnaround time: 355.89
-
-Process: 93
-Average waiting time: 344.07
-Average turnaround time: 354.42
-
-Process: 94
-Average waiting time: 369.57
-Average turnaround time: 380.17
-
-Process: 95
-Average waiting time: 406.39
-Average turnaround time: 417.83
-
-Process: 96
-Average waiting time: 363.59
-Average turnaround time: 374.37
-
-Process: 97
-Average waiting time: 336.6
-Average turnaround time: 346.63
-
-Process: 98
-Average waiting time: 372.74
-Average turnaround time: 383.3
-
-Process: 99
-Average waiting time: 372.2
-Average turnaround time: 382.91
-
-Process: 100
-Average waiting time: 331.46
-Average turnaround time: 341.55
+Set: 90
+Average waiting time: 406.98
+Average turnaround time: 418.33
+
+Set: 91
+Average waiting time: 359.32
+Average turnaround time: 370.01
+
+Set: 92
+Average waiting time: 397.17
+Average turnaround time: 408.65
+
+Set: 93
+Average waiting time: 373.65
+Average turnaround time: 384.59
+
+Set: 94
+Average waiting time: 374.26
+Average turnaround time: 385.3
+
+Set: 95
+Average waiting time: 412.46
+Average turnaround time: 424.08
+
+Set: 96
+Average waiting time: 447.81
+Average turnaround time: 459.96
+
+Set: 97
+Average waiting time: 427.28
+Average turnaround time: 439.23
+
+Set: 98
+Average waiting time: 397.88
+Average turnaround time: 409.16
+
+Set: 99
+Average waiting time: 352.24
+Average turnaround time: 362.66
+
+Set: 100
+Average waiting time: 354.7
+Average turnaround time: 365.34
 

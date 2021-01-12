@@ -48,12 +48,16 @@ void Controller::draw()
 
     if ((current_state == FCFS || current_state == SJF) && data_option != NOT_CHOSEN)
     {
-        std::cout << "\n1) Show data\n";
+        std::cout << "\n1) Show data and write them to Test_data.txt\n";
         std::cout << "2) Run algorithm" << "\n";
         std::cout << "Chose option:\n";
         std::cin >> temp;
         if (temp == 1)
+        {
             file.draw_processes();
+        }
+        if (temp == 2)
+            file.write_tested_data_to_file();
         if (temp == 2 && current_state == FCFS && data_option == FROM_FILE)
         {
             algorithms.FCFS_algorithm(file.get_data_storage());
@@ -76,12 +80,12 @@ void Controller::draw()
         }
         if (current_state == WRITE && data_option == FROM_FILE)
         {
-            file.write_to_file(algorithms.get_results());
+            file.write_results_to_file(algorithms.get_results());
             current_state = STOP;
         }
         if (current_state == WRITE && data_option == _100_sets_of_100_elements)
         {
-            file.write_to_file(algorithms.get_results());
+            file.write_results_to_file(algorithms.get_results());
             current_state = STOP;
         }
     }
