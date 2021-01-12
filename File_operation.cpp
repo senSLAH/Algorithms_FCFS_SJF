@@ -94,6 +94,23 @@ void File_operation::read_file()
             data_storage.push_back(temp);
         }
     }
+
+    //jeżeli rozmiar jest równy 10 000, to znaczy że chcę zbadacz
+    //algorytm na na stu różnych ciągach(każdy z ciągów zawiera 100 procesów).
+    //w takiem razie potzebujemy dwuwymiarowego wektora
+    if (data_storage.size() == 10000)
+    {
+        int element = 0;
+        for (int i = 0; i < 100; ++i)
+        {
+            for (int j = 0; j < 100; ++j)
+            {
+                data_storage_two_measures[i][j] = data_storage[element];
+                ++element;
+            }
+        }
+        data_option = 2;//przypisujemy wartość dwa, bo będziemy stosować dwuwymiarowy vector
+    }
 }
 
 void File_operation::generate_100_sets_of_100_elements()
@@ -157,7 +174,6 @@ void File_operation::write_results_to_file(std::vector<std::vector<float>> res)
         output_results_data_file << "\nAverage waiting time: " << res[i][0];
         output_results_data_file << "\nAverage turnaround time: " << res[i][1] << "\n\n";
     }
-
 }
 
 void File_operation::write_tested_data_to_file()
@@ -166,7 +182,7 @@ void File_operation::write_tested_data_to_file()
     {
         for (auto &i : data_storage)
         {
-            output_tested_data_file << "Process: " << i.name << "\n";
+            output_tested_data_file << "P: " << i.name << "\n";
             output_tested_data_file << "Service time: " << i.service_time << "\n";
             output_tested_data_file << "Arrival time: " << i.arrival_time << "\n";
             output_tested_data_file << "\n--------------------------------------\n";
@@ -178,11 +194,8 @@ void File_operation::write_tested_data_to_file()
         {
             for (int j = 0; j < data_storage_two_measures[i].size(); ++j)
             {
-                output_tested_data_file << "Process: " << data_storage_two_measures[i][j].name << " in the set: " << i + 1
-                                        << "\n";
-                output_tested_data_file << "Service time: " << data_storage_two_measures[i][j].service_time << "\n";
-                output_tested_data_file << "Arrival time: " << data_storage_two_measures[i][j].arrival_time << "\n";
-                output_tested_data_file << "\n--------------------------------------\n";
+                output_tested_data_file << "P" << j+1 << ": s=" << data_storage_two_measures[i][j].service_time
+                << " a=" << data_storage_two_measures[i][j].arrival_time << "\n";
             }
         }
     }
@@ -194,6 +207,11 @@ File_operation::~File_operation()
     output_results_data_file.close();
     output_tested_data_file.close();
     std::cout << "Files successfully closed!\n";
+}
+
+int File_operation::get_data_option()
+{
+    return data_option;
 }
 
 

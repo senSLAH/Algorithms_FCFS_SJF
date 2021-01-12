@@ -46,6 +46,7 @@ public:
     void draw_processes() const;
     void write_results_to_file(std::vector<std::vector<float>> res);
     void write_tested_data_to_file();
+    int get_data_option();
 
     ~File_operation();
     //zamyka pliki

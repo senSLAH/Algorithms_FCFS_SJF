@@ -48,6 +48,7 @@ void Controller::draw()
 
     if ((current_state == FCFS || current_state == SJF) && data_option != NOT_CHOSEN)
     {
+        data_option = static_cast<Data_option>(file.get_data_option());
         std::cout << "\n1) Show data and write them to Test_data.txt\n";
         std::cout << "2) Run algorithm" << "\n";
         std::cout << "Chose option:\n";
