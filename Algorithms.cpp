@@ -109,7 +109,6 @@ void Algorithms::bubble_sort(std::vector<Process> &arr_of_proces, std::string op
     }
 }
 
-// liczy Average turnaround time i Average waiting time
 void Algorithms::average_TAT_WT(std::vector<Process> &arr_of_proces)
 {
     float avg_turnaround = 0;

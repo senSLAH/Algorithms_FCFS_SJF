@@ -201,6 +201,12 @@ void File_operation::write_tested_data_to_file()
     }
 }
 
+int File_operation::get_data_option()
+{
+    return data_option;
+}
+
+
 File_operation::~File_operation()
 {
     input_file.close();
@@ -209,10 +215,6 @@ File_operation::~File_operation()
     std::cout << "Files successfully closed!\n";
 }
 
-int File_operation::get_data_option()
-{
-    return data_option;
-}
 
 
 

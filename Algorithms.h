@@ -13,12 +13,23 @@ class Algorithms
     std::vector<std::vector<float>> results;
 public:
     Algorithms();
+
     void FCFS_algorithm(std::vector<Process> &arr_of_proces);
+
     void FCFS_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces);
+    //dziłanie polega na wywoławniu algorytmu FCFS(FCFS_algorithm()) dla każdego z cągu procesów
+
     void SJF_algorith(std::vector<Process> &arr_of_proces);
+
     void SJF_algorithm_two_measures(std::vector<std::vector<Process>> &arr_of_proces);
+    //dziłanie polega na wywoławniu algorytmu SJF(SJF_algorith) dla każdego z cągu procesów
+
     void average_TAT_WT(std::vector<Process> &arr_of_proces);
+    // oblicza Average turnaround time i Average waiting time
+
     void average_TAT_WT(std::vector<std::vector<float>> results);
+    //oblicza średnią ze średnich ze stu cągów
+
     std::vector<std::vector<float>> get_results();
 
     void bubble_sort(std::vector<Process> &arr_of_proces, std::string option = "arrival");
@@ -26,7 +37,7 @@ public:
     // *-> 'arr_of_proces' który zawiera wszystki procesy
     // *-> 'option' może przyjmować dwa parametry "arrival" lub "service"
     // sortuje elementy w 'arr_of_proces' według paramentru "arrival" lub "service"
-    // w zależności od wartosci option
+    // w zależności od wartosci "option"
 };
 
 
